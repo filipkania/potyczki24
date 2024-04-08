@@ -21,12 +21,12 @@ spec:
         - containerPort: 80
         readinessProbe:
           tcpSocket:
-            port: 8080
+            port: 80
           initialDelaySeconds: 3
           periodSeconds: 2
         livenessProbe:
           httpGet:
-            path: /somepath
+            path: /
             port: 80
           initialDelaySeconds: 3
           periodSeconds: 2
